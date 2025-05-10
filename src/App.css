@@ -1,0 +1,55 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container responsiveness */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Dark mode transition */
+.dark * {
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Custom focus styles */
+button:focus, a:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Improve accessibility for focus states in dark mode */
+.dark button:focus, .dark a:focus, .dark input:focus, .dark select:focus, .dark textarea:focus {
+  outline: 2px solid rgba(96, 165, 250, 0.5);
+}
